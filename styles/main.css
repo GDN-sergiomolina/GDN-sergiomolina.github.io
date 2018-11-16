@@ -7358,3 +7358,57 @@ a.credit {
 	background:white;
 	color:var(--primary-color);
 }
+
+/*	PRELOADER*/
+/*
+#tt-preloader {
+	background: #FFF;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 9999;
+	
+}
+
+#pre-status,
+.preload-placeholder {
+	background-image: url(../images/preloader1.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 200px;
+	left: 50%;
+	margin: -100px 0 0 -100px;
+	position: absolute;
+	top: 50%;
+	width: 200px;
+	background-blend-mode: screen;
+}
+
+.preload-placeholder {
+	background: none;
+	left: 0;
+	margin: 0;
+	text-align: center;
+	top: 65%;
+}*/
+
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9998;
+	background: #EFEFEF;
+}
+#loader-icon{
+	background: url(../images/preloader-gdn.gif) center no-repeat #EFEFEF;
+	background-size: 130px;
+	z-index: 9999;
+}

@@ -19,6 +19,15 @@
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
   </head>
   <body id="top">
+	<!-- Preloader -->
+	<!--<div id="tt-preloader">
+		<div id="pre-status">
+			<div class="preload-placeholder"></div>
+		</div>
+			</div>-->
+	<div class="loader" id="loader-icon"></div>
+
+	  
     <header>
       <div class="profile-page sidebar-collapse">
         <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
@@ -59,7 +68,7 @@
 			  <a class="btn  btn-round btn-lg btn-icon" href="https://www.linkedin.com/in/sergio-molina-villanueva-b3275853/" rel="tooltip" title="Añádeme a LinkedIn"><i class="fa fa-linkedin"></i></a>
 			  <a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.youtube.com/channel/UCkbhXVHH0L_F1WGlSyLv1OQ" rel="tooltip" title="Suscríbete a mi canal"><i class="fa fa-youtube-play"></i></a>
 			  <a class="btn btn-default btn-round btn-lg btn-icon" href="https://soundcloud.com/gdn-gaiden" rel="tooltip" title="Escúchame en SoundCloud"><i class="fa fa-soundcloud"></i></a>
-			  <a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.instagram.com/ganxxbang/" rel="tooltip" title="Sígueme en Instagram"><i class="fa fa-instagram"></i></a></div>
+			  <a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.instagram.com/gdnfilms/" rel="tooltip" title="Sígueme en Instagram"><i class="fa fa-instagram"></i></a></div>
         </div>
       </div>
     </div>
@@ -293,9 +302,12 @@
 			  
 			<div class="col-md-4"> <!--Columna 3-->
               <!--fila 1--><div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-				<figure class="cc-effect"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/OLMa5nK94TI?showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen> Agua de Mayo - Motion Screen </iframe>Alba Emoting<br><strong>Grabación Evento</strong><br>
+				<figure class="cc-effect"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/OLMa5nK94TI?showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen> Alba Emoting </iframe>Alba Emoting<br><strong>Grabación Evento</strong><br>
                   </figure></div>
-              <!--fila 2--><div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#" onClick="MyWindow=window.open('images/MockUp_libreta2018.png','MyWindow'); return false;">
+			<!--fila 2--><div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+				<figure class="cc-effect"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/1EXMptaK4-U?showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen> Ciniko - Español </iframe>Español<br><strong>Lyric Video</strong><br>
+                  </figure></div>
+              <!--fila 3--><div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#" onClick="MyWindow=window.open('images/MockUp_libreta2018.png','MyWindow'); return false;">
                   <figure class="cc-effect"><img src="images/MockUp_libreta2018.png" alt="Libreta IDD"/>
                     <figcaption>
                       <div class="h4">Libreta</div>
@@ -340,7 +352,11 @@
 			  <!--fila 2--><div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
 				<figure class="cc-effect"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/K5FRvBiw3Q4?showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen> Aula de Innovación - Grabación Evento </iframe>Aula de Innovación<br><strong>Grabación Evento</strong><br>
                   </figure></div>
-				  </div>
+				  
+			<!--fila 3--><div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+				<figure class="cc-effect"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/1EXMptaK4-U?showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen> Ciniko - Español </iframe>Español<br><strong>Lyric Video</strong><br>
+                  </figure></div>
+			</div>
 		  </div>
         </div>
       </div>
@@ -490,7 +506,7 @@
         <div class="col-md-12 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body cc-experience-header" style="background: var(--color-primary); color:white;">
 			  <!--<h6>FREELANCE</h6><p></p>--><div class="h5"><strong>Freelance</strong></div><p>Videoclips, logos, infografías, diseños, videos, mockups... </p>
-            <img src="images/gdn-portada.png" alt="logo-gdn" width=350em;/>
+            <img src="images/gdn-portada.png" alt="logo-gdn" width="350em"/>
 			  <div class="h5">¿Quieres trabajar conmigo?</div>
 			  <a href="#contact" class="btn btn-hire">Explícame tu idea</a>
           </div>
@@ -759,5 +775,16 @@
     <script src="js/now-ui-kit.js?v=1.1.0"></script>
     <script src="js/aos.js"></script>
     <script src="scripts/main.js"></script>
+	 <!--Preloader-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+	<script>
+	// Wait for window load
+	$(window).load(function() {
+		// Animate loader off screen
+		$("#loader-icon").fadeOut("fast");
+		$(".loader").fadeOut("slow");
+	});</script>
+	  
   </body>
 </html>
