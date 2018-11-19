@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SERGIO MOLINA - Personal Portfolio</title>
+    <title>GDN - Personal Portfolio</title>
     <meta name="description" content="CV & Portfolio personal Sergio Molina, GDN design & film."/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
@@ -25,7 +25,7 @@
 			<div class="preload-placeholder"></div>
 		</div>
 			</div>-->
-	<div class="loader" id="loader-icon"></div>
+	<div class="loader mobile-hide" id="loader-icon"><h3 style="position: relative; text-align: center; vertical-align: middle; line-height: 991px;">Cargando...</h3></div>
 
 	  
     <header>
@@ -49,7 +49,6 @@
       </div>
     </header>
     <div class="page-content">
-      <div>
 <div class="profile-page">
   <div class="wrapper">
     <div class="page-header page-header-small" filter-color="ganxx">
@@ -758,7 +757,7 @@
       </div>
     </div>
   </div>
-</div></div>
+</div>
     </div>
     <footer class="footer">
       <div class="container text-center"><a class="cc-linkedin btn btn-link" href="https://www.linkedin.com/in/sergio-molina-villanueva-b3275853/"><i class="fa fa-linkedin fa-2x " aria-hidden="true"></i></a><a class="cc-youtube btn btn-link " href="https://www.youtube.com/channel/UCkbhXVHH0L_F1WGlSyLv1OQ"><i class="fa fa-youtube-play fa-2x " aria-hidden="true"></i></a><a class="cc-soundcloud btn btn-link" href="https://soundcloud.com/gdn-gaiden"><i class="fa fa-soundcloud fa-2x" aria-hidden="true"></i></a><a class="cc-instagram btn btn-link" href="https://www.instagram.com/ganxxbang/"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a></div>
@@ -766,7 +765,7 @@
 	  
       <div class="text-center text-muted">
 		  <img src="images/gdn-portada-black.png" alt="gdn-logo" style="margin:.2em; width: 15em;"/>
-		  <p><b>Last Update: Oct 2018</b><br>DreamWeaver &copy; Creative CV. All rights reserved.<br>Design - <a class="credit" href="https://templateflip.com" target="_blank">TemplateFlip</a></p>
+		  <p><b>Last Update: Nov 2018</b><br>DreamWeaver &copy; Creative CV. All rights reserved.<br>Design - <a class="credit" href="https://templateflip.com" target="_blank">TemplateFlip</a></p>
       </div>
     </footer>
     <script src="js/core/jquery.3.2.1.min.js"></script>
@@ -776,11 +775,9 @@
     <script src="js/aos.js"></script>
     <script src="scripts/main.js"></script>
 	 <!--Preloader-->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 	<script>
 	// Wait for window load
-	$(window).load(function() {
+	$(window).on('load', function() {
 		// Animate loader off screen
 		$("#loader-icon").fadeOut("fast");
 		$(".loader").fadeOut("slow");

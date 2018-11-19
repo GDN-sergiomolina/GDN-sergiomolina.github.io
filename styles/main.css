@@ -5632,13 +5632,13 @@ Created using IcoMoon - icomoon.io
     transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
   }
   .sidebar-collapse .navbar-collapse:before { /*modified GANXI - sidebar-color*/
-    background: var(--primary-color); /*original: #378C3F*/
+    background: #378C3F;
     /* For browsers that do not support gradients */
     /* For Safari 5.1 to 6.0 */
     /* For Opera 11.1 to 12.0 */
     /* For Firefox 3.6 to 15 */
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--primary-color)), color-stop(80%, #000));
-    background: linear-gradient(var(--primary-color) 0%, #000 80%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#378C3F), color-stop(80%, #000));
+    background: linear-gradient(#378C3F 0%, #000 80%);
     /* Standard syntax (must be last) */
     opacity: 0.76;
     filter: alpha(opacity=76);
@@ -7321,6 +7321,8 @@ a.credit {
   padding-bottom: 0;
 }
 
+/*--------------------ADDED GANXI-----------------------*/
+
 /*HIRE*/
 .hire-section {
     background: url(../images/hire4-bg.jpg) no-repeat top center var(--primary-color);
@@ -7360,40 +7362,6 @@ a.credit {
 }
 
 /*	PRELOADER*/
-/*
-#tt-preloader {
-	background: #FFF;
-	bottom: 0;
-	left: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 9999;
-	
-}
-
-#pre-status,
-.preload-placeholder {
-	background-image: url(../images/preloader1.gif);
-	background-position: center;
-	background-repeat: no-repeat;
-	height: 200px;
-	left: 50%;
-	margin: -100px 0 0 -100px;
-	position: absolute;
-	top: 50%;
-	width: 200px;
-	background-blend-mode: screen;
-}
-
-.preload-placeholder {
-	background: none;
-	left: 0;
-	margin: 0;
-	text-align: center;
-	top: 65%;
-}*/
-
 /* This only works with JavaScript, 
 if it's not present, don't show loader */
 .no-js #loader { display: none;  }
@@ -7411,4 +7379,9 @@ if it's not present, don't show loader */
 	background: url(../images/preloader-gdn.gif) center no-repeat #EFEFEF;
 	background-size: 130px;
 	z-index: 9999;
+}
+
+/*MOBILE HIDE*/
+@media screen and (min-width: 0px) and (max-width: 720px) {
+  .mobile-hide{ display: none; }
 }
