@@ -3088,7 +3088,7 @@ body {
 }
 
 .nav-pills .nav-item .nav-link.active, .nav-pills .nav-item .nav-link.active:focus, .nav-pills .nav-item .nav-link.active:hover {
-  background-color: #9A9A9A; /*icons portfolio color GANXI*/
+  background-color: #9A9A9A; /*icons porfolio color GANXI*/
   color: #FFFFFF;
   -webkit-box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.3);
@@ -3115,7 +3115,7 @@ body {
 }
 
 .nav-pills.nav-pills-primary .nav-item .nav-link.active, .nav-pills.nav-pills-primary .nav-item .nav-link.active:focus, .nav-pills.nav-pills-primary .nav-item .nav-link.active:hover {
-  background-color: var(--primary-color); /*color portfolio icon selected GANXI - original: #378C3F;*/
+  background-color: var(--primary-color); /*color porfolio icon selected GANXI - original: #378C3F;*/
 }
 
 .nav-pills.nav-pills-info .nav-item .nav-link.active, .nav-pills.nav-pills-info .nav-item .nav-link.active:focus, .nav-pills.nav-pills-info .nav-item .nav-link.active:hover {
@@ -3125,6 +3125,7 @@ body {
 .nav-pills.nav-pills-success .nav-item .nav-link.active, .nav-pills.nav-pills-success .nav-item .nav-link.active:focus, .nav-pills.nav-pills-success .nav-item .nav-link.active:hover {
   background-color: #18ce0f;
 }
+
 
 .nav-pills.nav-pills-warning .nav-item .nav-link.active, .nav-pills.nav-pills-warning .nav-item .nav-link.active:focus, .nav-pills.nav-pills-warning .nav-item .nav-link.active:hover {
   background-color: #FFB236;
@@ -4647,6 +4648,8 @@ Created using IcoMoon - icomoon.io
           box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
 }
 
+
+
 .card .card-body {
   min-height: 190px;
 }
@@ -5632,16 +5635,16 @@ Created using IcoMoon - icomoon.io
     transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
   }
   .sidebar-collapse .navbar-collapse:before { /*modified GANXI - sidebar-color*/
-    background: #378C3F;
+    background: var(--primary-color);
     /* For browsers that do not support gradients */
     /* For Safari 5.1 to 6.0 */
     /* For Opera 11.1 to 12.0 */
     /* For Firefox 3.6 to 15 */
-    background: -webkit-gradient(linear, left top, left bottom, from(#378C3F), color-stop(80%, #000));
-    background: linear-gradient(#378C3F 0%, #000 80%);
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--primary-color)), color-stop(90%, #000));
+    background: linear-gradient(var(--primary-color) 20%, #000 90%);
     /* Standard syntax (must be last) */
-    opacity: 0.76;
-    filter: alpha(opacity=76);
+    opacity: 1; /*0.76;*/
+    /*filter: alpha(opacity=76);*/
     display: block;
     content: "";
     position: absolute;
@@ -6902,8 +6905,10 @@ Created using IcoMoon - icomoon.io
 /* Images Gallery Style*/
 .gallery .cc-porfolio-image figure {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   text-align: center;
+  padding-bottom: 1em;
+  height: 15em;
 }
 
 .gallery .cc-porfolio-image figure img {
@@ -6927,6 +6932,7 @@ Created using IcoMoon - icomoon.io
   left: 0;
   width: 100%;
   height: 100%;
+
 }
 
 .gallery .cc-porfolio-image figure figcaption > a {
@@ -6942,6 +6948,10 @@ Created using IcoMoon - icomoon.io
   margin: 0;
 }
 
+.gallery .cc-porfolio-vid figure {text-align:center; height: 19em; padding-bottom: 4.1em; overflow: visible;} /*resize porfolio video containers - GANXX*/
+
+.gallery .cc-porfolio-image figure {height: auto; padding-bottom: 0; overflow: hidden;} /*resize porfolio img containers - GANXX*/
+
 .gallery figure.cc-effect figcaption::before,
 .gallery figure.cc-effect figcaption::after {
   position: absolute;
@@ -6950,7 +6960,7 @@ Created using IcoMoon - icomoon.io
 }
 
 .gallery figure.cc-effect figcaption::before {
-  top: 1px; /*px borde fondo negro on hover portfolio*/
+  top: 1px; /*px borde fondo negro on hover porfolio*/
   right: 1px;
   bottom: 1px;
   left: 1px;
@@ -6994,7 +7004,7 @@ Created using IcoMoon - icomoon.io
 
 .gallery figure.cc-effect p,
 .gallery figure.cc-effect button {
-  padding: 0.5em 2em;
+  padding: 1em 2em;
   text-transform: uppercase;
   letter-spacing: 1px;
   -webkit-transition: -webkit-transform 0.35s;
@@ -7037,6 +7047,10 @@ Created using IcoMoon - icomoon.io
 
 .gallery figure.cc-effect:hover figcaption:before {
   background: rgba(27, 23, 23, 0.5);
+}
+
+.gallery figure.illustration:hover figcaption:before { /*ADDED GANXI*/
+  /* background: rgba(27, 23, 23, 0.2) !important; */
 }
 
 .gallery figure.cc-effect:hover .h4,
@@ -7362,8 +7376,7 @@ a.credit {
 }
 
 /*	PRELOADER*/
-/* This only works with JavaScript, 
-if it's not present, don't show loader */
+/* This only works with JavaScript, if it's not present, don't show loader */
 .no-js #loader { display: none;  }
 .js #loader { display: block; position: absolute; left: 100px; top: 0; }
 .loader {
@@ -7373,15 +7386,93 @@ if it's not present, don't show loader */
 	width: 100%;
 	height: 100%;
 	z-index: 9998;
-	background: #EFEFEF;
+	background: #ececec; /*#EFEFEF;*/
 }
 #loader-icon{
-	background: url(../images/preloader-gdn.gif) center no-repeat #EFEFEF;
+	background: url(../images/preloader-gdn.gif) center no-repeat #ececec;
 	background-size: 130px;
 	z-index: 9999;
 }
 
 /*MOBILE HIDE*/
 @media screen and (min-width: 0px) and (max-width: 720px) {
-  .mobile-hide{ display: none; }
+  .mobile-hide{ display: none !important; }
+	
+  .mobile-show{ display: block !important; }
 }
+.mobile-show{ display: none; }
+
+
+
+/* PESTAÑAS from https://www.w3schools.com/howto/howto_js_tabs.asp*/
+/* Style the links inside the pill navigation menu */
+.pill-nav{
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	margin-top: -1.5em;
+}
+
+.pill-nav a{
+  display: inline-block;
+  text-align: center;
+  padding: 9px 50px;
+  margin-right: 2em;
+  margin-bottom: 3.5em;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 25px;
+  background-color:#F1F1F1;
+}
+
+/* Change the color of links on mouse-over */
+.pill-nav a:hover{
+	background-color:#E4E4E4;
+	cursor: pointer;
+}
+
+/* Add a color to the active/current link */
+.vid-links a.active, .img-links a.activo {
+	color: white;
+	background-color: var(--primary-color);
+	  -webkit-box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.3);
+	animation: fadein ease 0.4s;}
+@keyframes fadein{from{opacity:0.6} to{opacity:1}}
+
+.vid-links a.active:hover, .img-links a.activo:hover{color:white;}
+
+.img_pillcontent, .vid_pillcontent{display: none !important;}
+
+.img_pillcontent-active, .vid_pillcontent-active{display:block; text-align:center; padding-bottom: 2em}
+
+/*fade-in animation*/
+.w3-animate-top{position:relative;animation:animatetop ease 0.6s;}
+@keyframes animatetop{from{top:-50px;opacity:0} to{top:0;opacity:1}}
+
+
+/* CENTER porfolio ELEMENTS */
+.porfolio{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	height: auto;
+}
+
+/*porfolio IMG CAPTION CENTERED*/
+.cc-effect figcaption {
+    width: 100%;
+    height: 100%;
+    display: table;
+    text-align: center;
+}
+
+.cc-effect figcaption p{
+	display: table-cell;
+    vertical-align: middle;
+	/*font-weight: bold;*/
+}
+
+/*ZOOM ICON PORFOLIO*/
+.illustration i {font-size: 2em;}
