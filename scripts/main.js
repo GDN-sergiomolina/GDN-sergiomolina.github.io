@@ -42,11 +42,6 @@ $('a.smooth-scroll')
   }
 });
 	
-//$("#pl-motiongraphics").load("portfolio-motiongraphics.html");
-//$("#pl-videolyrics").load("portfolio-videolyrics.html");
-//$("#pl-videoclips").load("portfolio-videoclips.html");
-//$("#pl-otros").load("portfolio-otros.html");
-		
 });
 
 
@@ -55,7 +50,7 @@ function click_Vid(){
 	document.getElementById("video").style.display = "block";
 }
 
-function click_Img(id){
+function click_Img(){
 	document.getElementById("imagen").style.display = "block";
 	document.getElementById("video").style.display = "none";
 }

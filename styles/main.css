@@ -7275,7 +7275,7 @@ Created using IcoMoon - icomoon.io
 }
 
 #contact { /*added ganxi*/
-	background: url(../images/frame-demo-reel-gdn.png) no-repeat center center;
+	background: url(../images/frame-demo-reel-gdn.jpg) no-repeat center center;
 	-webkit-background-attachment: fixed;
     background-attachment: fixed;
 	background-color: #222;
@@ -7476,3 +7476,6 @@ a.credit {
 
 /*ZOOM ICON PORFOLIO*/
 .illustration i {font-size: 2em;}
+
+/*HIDE PORFOLIO ON LOAD*/
+/*.hide-load{display: none !important;}*/
