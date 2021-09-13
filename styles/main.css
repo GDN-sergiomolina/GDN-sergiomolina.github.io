@@ -2936,6 +2936,18 @@ p {
   color: #282828; /*added GANXI - original: #9A9A9A;*/
 }
 
+/*ADDED GANXI - style courses education section */
+.course-title {  
+  text-transform: uppercase;
+  font-size: 1.3em;
+  color: #282828;
+}
+.course-title img {  
+  height: 20px;
+  width: auto;
+}
+/*-----------------------*/
+
 .text-primary {
   color: #378C3F !important;
 }
@@ -4657,7 +4669,13 @@ Created using IcoMoon - icomoon.io
 .card-body > img {padding-right: 1em;} /*added ganxi*/
 .card-body > p {padding-right: 1em;} /*added ganxi*/
 
-.img-education{display: flex;
+.img-education{
+  margin: 0;
+  position: absolute !important;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+	display: flex;
     align-items: center;
     flex-wrap: wrap;} /*ADDED GANXI*/
 
